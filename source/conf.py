@@ -51,7 +51,7 @@ language = 'ko'
 latex_engine = 'xelatex'
 latex_use_xindy = False
 latex_elements = {
-    'preamble': '\\usepackage[UTF8]{ctex}\n',
+    'preamble': '\\usepackage[UTF8]{xeCJK}\n',
 }
 
 # List of patterns, relative to source directory, that match files and
