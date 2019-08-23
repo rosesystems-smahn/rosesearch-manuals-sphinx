@@ -12,9 +12,11 @@ Fastcatsearch 공식 저장소는 `JDK 1.6` 이하에 해당하는 클래스와 
 
 Apache Maven을 사용하여 프로젝트를 관리한다.
 빌드시 명령어는 다음과 같다.
+
 ```
 $ mvn clean install
 ```
+
 위의 명령을 수행하면, `target` 디렉토리에 컴파일된 패키지파일이 생성된다.
 
 

@@ -1,5 +1,5 @@
-JAVA 성능튜닝가이드
-===============
+# JAVA 성능튜닝가이드
+
 
 목차
 ---
@@ -48,7 +48,7 @@ jstack <JAVA PID> > thread1.txt
 와 같이 파일로 저장하고 확인한다.
 
 
-<a name="Case Study"></a>
+<a name="CaseStudy"></a>
 2. Case Study
 ----------
 

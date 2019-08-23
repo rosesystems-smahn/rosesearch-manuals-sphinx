@@ -1,5 +1,5 @@
-로그분석기 통합매뉴얼
-==================
+# 로그분석기 통합매뉴얼
+
 
 목차
 ---
@@ -11,16 +11,16 @@
 6. 시스템 설정관리
 
 <span></span>
-1. 시스템개요
+### 1. 시스템개요
 ------------
 
-###1.1. 개요
+### 1.1. 개요
 
 로그분석기는 검색 시스템 내 키워드의 검색수, 클릭수 등을 기반으로 하여, 입력된 키워드에 대한 유저들의 반응 기대치를 분석하는데 초점을 맞춘 시스템이다.
 
 검색엔진과는 별도로 독립된 서버로 운영되며, 날짜와 시간별로 유입되는 키워드를 집계하고, 일/주/월/년별로 통계를 수행한다.
 
-###1.2. 시스템 구성
+### 1.2. 시스템 구성
 
 로그분석기는 웹서버등으로부터 API를 통해 검색관련 데이터를 제공받아 주기적으로 통계를 수행한다.
 통계데이터는 외부 DB에 저장하고 관리도구를 통해 해당 DB를 조회함으로써 통계결과를 제공한다.
@@ -102,7 +102,7 @@
 - 데이터 다운로드 기능
 - 클릭유입률 통계파일저장
  
-###1.4. 외부 API 연계기능
+### 1.4. 외부 API 연계기능
 
 HTTP Rest 방식의 통신을 이용하여 JSON 형태의 결과를 외부에 제공함으로써 유용한 통계자료를 번거로운 작업없이 빠르게 활용할 수 있도록 도와준다.
  
@@ -121,7 +121,7 @@ HTTP Rest 방식의 통신을 이용하여 JSON 형태의 결과를 외부에 �
 2. 로그분석기 설치
 ----------------
 
-###2.1. 설치환경
+### 2.1. 설치환경
 
 ##### 소스빌드
 
@@ -139,9 +139,9 @@ Java 1.6이상이 설치된 모든 운영체제에 설치가 가능하다.
 |Memory	|2G			|4G						|
 |Disk	|10GB		|100GB					|
  
-###2.2. 소스빌드
+### 2.2. 소스빌드
 
-####2.2.1. 준비환경
+#### 2.2.1. 준비환경
 
 ##### 소스빌드 준비환경
 
@@ -151,7 +151,7 @@ Java 1.6이상이 설치된 모든 운영체제에 설치가 가능하다.
 |Maven	|Ver 2.0 이상																				|
 |기타	|인터넷 접속 가능환경<br/> Maven 빌드시 의존 라이브러리를 받아올 수 있도록 인터넷 환경 필요	|
  
-####2.2.2. 다운로드와 빌드
+#### 2.2.2. 다운로드와 빌드
  
 ##### 소스다운로드
 
@@ -200,7 +200,7 @@ $ mvn clean package
 
 빌드가 성공적으로 끝났다면 `taget/` 하위에 `analytics-버전명` 으로 디렉토리가 생성된다.
 
-###2.3. 로그분석기 설치
+### 2.3. 로그분석기 설치
 
 ##### 파일복사
 
@@ -230,7 +230,7 @@ $ mv -r target/analytics-*  <설치위치>/
 3. 서비스 시작/종료
 -----------------
 
-###3.1. 서비스 시작
+### 3.1. 서비스 시작
 
 ##### 스크립트
 
@@ -255,7 +255,7 @@ $ mv -r target/analytics-*  <설치위치>/
 - Linux : tail -f logs/output.log 를 통해 시스템로그를 확인한다.
 - Windows :  logs/output.log 파일을 윈도우용 tail 프로그램 또는 텍스트편집기로 열어본다.
  
-###3.2. 서비스 종료
+### 3.2. 서비스 종료
 
 ##### 스크립트
 
@@ -265,7 +265,7 @@ $ mv -r target/analytics-*  <설치위치>/
 4. 사이트 리포트
 ---------------
 
-###4.1. 시작
+### 4.1. 시작
 
 ##### 로그인
 
@@ -297,7 +297,7 @@ $ mv -r target/analytics-*  <설치위치>/
 
 ![](https://raw.githubusercontent.com/fastcat-co/fastcat-manuals/master/search-analytics/analytics-manual/ko/img/392.jpg)
  
-###4.2. 대시보드
+### 4.2. 대시보드
 
 대시보드는 리포트 하위의 통계정보를 한눈에 정리해서 볼 수 있는 기능이다.
 대시보드는 "주" 또는 "월" 을 선택하여 해당기간의 데이터를 그래프와 수치로 확인할 수 있다.
@@ -306,7 +306,7 @@ $ mv -r target/analytics-*  <설치위치>/
 
 대시보드는 크게 아래의 4가지로 나누어진다.
 
-####4.2.1. Hit Progress
+#### 4.2.1. Hit Progress
 
 검색횟수추이 이며, 선택한 기간의 일자별 검색횟수와 이전 기간의 검색횟수를 함께 그래프로 보여준다. 
 
@@ -314,7 +314,7 @@ $ mv -r target/analytics-*  <설치위치>/
 - Last Period Search PV : 이전 기간의 검색횟수의 총합
 - Change : 현재기간과 이전기간과의 변동비율
  
-####4.2.2. Keyword Rank
+#### 4.2.2. Keyword Rank
 
 검색어순위이며, 선택한 기간내의 모든 검색어별 검색순위를 종합하여 상위 10위를 보여준다.
 
@@ -322,12 +322,12 @@ $ mv -r target/analytics-*  <설치위치>/
 - COUNT : 해당기간내 검색횟수 총합
 - CHANGE : 순위변동량. (+) 이면 상승, (-) 이면 하강을 의미한다.
  
-####4.2.3. 검색어 비율
+#### 4.2.3. 검색어 비율
 
 검색어 비율은 사이트설정을 통해 어떤 데이터를 보여줄지 선택할 수 있다. 
 카테고리분류, 정렬분류 등을 선택할 수 있으며, PIE그래프로 데이터를 표현한다.
 
-####4.2.4. Click-through Rate
+#### 4.2.4. Click-through Rate
 
 클릭 유입율이며, 해당 기간내 일자별 클릭 유입건수와 총 검색건수를 선 그래프로 보여준다.
 두 데이터의 비율이 클릭유입률이 되며, 이 비율을 막대그래프로 보여준다.
@@ -338,7 +338,7 @@ $ mv -r target/analytics-*  <설치위치>/
 - Click-through Count : 클릭횟수
 - Click-through Rate : 클릭유입률이며, Click-through Count 를 Search PV 로 나눈 백분율 수치이다.
 
-###4.3. 검색추이
+### 4.3. 검색추이
 
 카테고리별 검색횟수와 응답시간의 추이를 제공한다. 
 
@@ -367,9 +367,9 @@ $ mv -r target/analytics-*  <설치위치>/
 
 ![](https://raw.githubusercontent.com/fastcat-co/fastcat-manuals/master/search-analytics/analytics-manual/ko/img/395.jpg)
  
-###4.4. 검색어순위
+### 4.4. 검색어순위
 
-####4.4.1. 실시간 검색어순위
+#### 4.4.1. 실시간 검색어순위
 
 최근 30분간의 검색어순위를 보여준다. 실시간 검색어순위는 현재를 기준으로 이전 30분간 데이터에 대하여 통계를 내며, 이 작업은 주기적으로 5분마다 실행된다.
 이전 데이터의 범위를 수정하려면 "사이트설정" 항목을 참고한다.
@@ -387,7 +387,7 @@ $ mv -r target/analytics-*  <설치위치>/
 
 ![](https://raw.githubusercontent.com/fastcat-co/fastcat-manuals/master/search-analytics/analytics-manual/ko/img/396.jpg)
  
-####4.4.2. 기간별 검색어순위
+#### 4.4.2. 기간별 검색어순위
 
 선택한 기간에 생성된 검색어 순위를 보여준다. 검색어 순위는 통계조회시 계산되는 수치가 아니므로, 정해진 기간의 순위만 볼 수 있다. 즉, 구간설정에 따른 순위통계는 제공하지 않는다.
 
@@ -405,7 +405,7 @@ $ mv -r target/analytics-*  <설치위치>/
 
 ![](https://raw.githubusercontent.com/fastcat-co/fastcat-manuals/master/search-analytics/analytics-manual/ko/img/397.jpg)
 
-###4.5. 검색비율
+### 4.5. 검색비율
 
 선택한 기간내의 검색비율을 PIE 그래프로 보여준다. 조회할 타입의 설정방법은 "사이트설정 > 속성 설정" 항목을 참고한다.
 
@@ -435,12 +435,12 @@ $ mv -r target/analytics-*  <설치위치>/
 
 ![](https://raw.githubusercontent.com/fastcat-co/fastcat-manuals/master/search-analytics/analytics-manual/ko/img/398.jpg)
 
-###4.6. 검색유입률/클릭유입률
+### 4.6. 검색유입률/클릭유입률
 
 - 검색유입률 : 어떤 경로로 검색어가 유입되었는지를 확인하여 검색유입률을 계산한다.
 - 클릭유입률 : 검색후 어떠한 문서를 클릭했는지의 연관관계 데이터를 기반으로 클릭유입률을 계산한다.
 
-####4.6.1. Overview
+#### 4.6.1. Overview
  
 ##### 메뉴설명
 
@@ -470,7 +470,7 @@ $ mv -r target/analytics-*  <설치위치>/
 
 ![](https://raw.githubusercontent.com/fastcat-co/fastcat-manuals/master/search-analytics/analytics-manual/ko/img/399.jpg)
  
-####4.6.2. 상세 클릭유입
+#### 4.6.2. 상세 클릭유입
 
 월간 상세 클릭유입 데이터를 확인해볼 수 있다.
 
@@ -500,7 +500,7 @@ $ mv -r target/analytics-*  <설치위치>/
 
 ![](https://raw.githubusercontent.com/fastcat-co/fastcat-manuals/master/search-analytics/analytics-manual/ko/img/400.jpg)
  
-####4.6.3. 키워드 클릭유입
+#### 4.6.3. 키워드 클릭유입
 
 키워드별 클릭횟수와 유입률을 보여준다. 
 
@@ -516,11 +516,11 @@ $ mv -r target/analytics-*  <설치위치>/
 
 ![](https://raw.githubusercontent.com/fastcat-co/fastcat-manuals/master/search-analytics/analytics-manual/ko/img/401.jpg)
  
-###4.7. 키워드서비스
+### 4.7. 키워드서비스
 
 키워드 서비스에서는 연관검색어 통계를 제공한다.
 
-####4.7.1. 연관검색어
+#### 4.7.1. 연관검색어
 
 연관검색어는 로그분석기로 통계데이터 입력시 이전검색어와의 연관 빈도에 따라 연관관계로 자동등록이 된다. 
 
@@ -541,7 +541,7 @@ $ mv -r target/analytics-*  <설치위치>/
 5. 사이트 설정관리
 ----------------
 
-###5.1. 통계 설정
+### 5.1. 통계 설정
 
 통계에 사용되는 파라미터들을 설정한다.
 
@@ -596,7 +596,7 @@ Recent Log Using Size에 5로 입력시 이전 30분의 데이터로 실시간 �
 
 - 학습 스케줄 요일: 통계를 진행할 요일을 입력한다. 요일을 MON과 같이 세 글자로 입력하며, 요일을 여러 개 적을 경우 콤마(,)로 구분한다.
 
-###5.2. 카테고리 설정
+### 5.2. 카테고리 설정
 
 사이트하위 개념인 카테고리를 설정할 수 있다.
 카테고리가 추가되면 통계생성시 카테고리별로 통계데이터를 따로 생성하므로, 카테고리별로 데이터를 조회해 볼 수 있다.
@@ -616,7 +616,7 @@ Recent Log Using Size에 5로 입력시 이전 30분의 데이터로 실시간 �
 
 ![](https://raw.githubusercontent.com/fastcat-co/fastcat-manuals/master/search-analytics/analytics-manual/ko/img/404.jpg)
  
-###5.3. 속성(Attribute)설정
+### 5.3. 속성(Attribute)설정
 
 로그분석기의 API를 통해 통계데이터가 입력될때 사용되는 값들은 여기에서 미리 설정해두어야 올바르게 통계처리가 된다. 
 속성은 크게 3가지영역에 대해 설정이 가능하다.
@@ -645,7 +645,7 @@ Recent Log Using Size에 5로 입력시 이전 30분의 데이터로 실시간 �
 
 ![](https://raw.githubusercontent.com/fastcat-co/fastcat-manuals/master/search-analytics/analytics-manual/ko/img/405.jpg)
  
-###5.4. 통계실행
+### 5.4. 통계실행
 
 자동스케쥴 작업이 실행되지 않았거나, 스케쥴을 기다리지 않고 즉시 통계를 실행하고자 할때 사용된다.
 각 통계는 시/일/주/월/년 으로 나누어 실행되며 원하는 항목을 선택하여 한꺼번에 통계를 실행할 수 있다.
@@ -660,7 +660,7 @@ Recent Log Using Size에 5로 입력시 이전 30분의 데이터로 실시간 �
 
 ![](https://raw.githubusercontent.com/fastcat-co/fastcat-manuals/master/search-analytics/analytics-manual/ko/img/406.jpg)
  
-###5.5. 고급통계실행
+### 5.5. 고급통계실행
 
 기간 범위를 지정하여 모든 통계를 한꺼번에 실행하는 기능이다. 
 평상시에는 사용할 일이 없지만, 통계저장 DB가 사라졌거나, 초기 데이터 입력시등에 사용될 수 있다.
@@ -673,7 +673,7 @@ Recent Log Using Size에 5로 입력시 이전 30분의 데이터로 실시간 �
 
 우측 상단의 `톱니바퀴`를 클릭하면 시스템 설정관리 화면으로 이동한다.
  
-###6.1. 사용자 설정
+### 6.1. 사용자 설정
 
 운영자별로 계정을 만들어 사용할 수 있다. 권한설정 기능은 제공하지 않는다.
 
@@ -683,7 +683,7 @@ Recent Log Using Size에 5로 입력시 이전 30분의 데이터로 실시간 �
 
 ![](https://raw.githubusercontent.com/fastcat-co/fastcat-manuals/master/search-analytics/analytics-manual/ko/img/409.jpg)
  
-###6.2. 시스템 설정
+### 6.2. 시스템 설정
 
 전체 시스템에서 사용되는 고급 항목을 설정한다.
 
@@ -709,7 +709,7 @@ Recent Log Using Size에 5로 입력시 이전 30분의 데이터로 실시간 �
 
 ![](https://raw.githubusercontent.com/fastcat-co/fastcat-manuals/master/search-analytics/analytics-manual/ko/img/410.jpg)
  
-###6.3. 사이트 설정
+### 6.3. 사이트 설정
 
 통계대상이 되는 사이트를 추가한다.
 사이트를 추가하면 우측 상단 메뉴에서 사이트를 선택할 수 있다.
@@ -722,7 +722,7 @@ Recent Log Using Size에 5로 입력시 이전 30분의 데이터로 실시간 �
 
 ![](https://raw.githubusercontent.com/fastcat-co/fastcat-manuals/master/search-analytics/analytics-manual/ko/img/412.jpg)
  
-###6.4. 작업결과
+### 6.4. 작업결과
 
 카테고리별로 실행된 작업결과를 일자별 달력으로 확인한다.
 
@@ -757,13 +757,13 @@ Recent Log Using Size에 5로 입력시 이전 30분의 데이터로 실시간 �
 - Task : 작업 Task 클래스명
 - Explain : 작업 상세 로그
  
-###6.5. 시스템 에러
+### 6.5. 시스템 에러
 
 로그분석기의 시스템에러를 확인할 수 있으며, 내부 통계작업시의 에러도 포함된다.
 
 ![](https://raw.githubusercontent.com/fastcat-co/fastcat-manuals/master/search-analytics/analytics-manual/ko/img/415.jpg)
  
-###6.6. 원본로그파일
+### 6.6. 원본로그파일
 
 로그분석기에서 API를 통해 입력받는 원본 로그파일은 관리도구를 통해 조회가 가능하다.
 로그파일은 일별로 유지되기 때문에, 달력형태로 일별 로그파일을 확인해볼 수 있다.
