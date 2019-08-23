@@ -51,9 +51,8 @@ language = 'ko'
 latex_engine = 'xelatex'
 latex_use_xindy = False
 latex_elements = {
-    'preamble': '\\usepackage{xeCJK}\n',
+    'preamble': '\\usepackage[UTF8]{kotex}\n',
 }
-
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
