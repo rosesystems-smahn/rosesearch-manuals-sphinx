@@ -7,7 +7,7 @@ Welcome to rosesearch-manuals's documentation!
 ==============================================
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: common:
    :glob:
    :titlesonly:
@@ -16,7 +16,7 @@ Welcome to rosesearch-manuals's documentation!
    common/java-perf-guide/ko/*
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: fastcatsearch:
    :glob:
    :titlesonly:
@@ -35,7 +35,7 @@ Welcome to rosesearch-manuals's documentation!
    fastcatsearch/training/ko/*
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 4
    :caption: openstack:
    :glob:
    :titlesonly:
@@ -44,7 +44,7 @@ Welcome to rosesearch-manuals's documentation!
    openstack/ubuntu14-install-manual/ko/*
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 5
    :caption: search-analytics:
    :glob:
    :titlesonly:

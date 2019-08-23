@@ -30,6 +30,8 @@ extensions = [
     # Auto-generate section labels.
     'recommonmark',
     'sphinx.ext.autosectionlabel',
+    'sphinx.ext.autodoc',
+    'sphinx.ext.intersphinx',
     'sphinx_markdown_tables',
 ]
 # -- General configuration ---------------------------------------------------
